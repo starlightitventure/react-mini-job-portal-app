@@ -32,7 +32,6 @@ function Home() {
     <div data-testid='home-component' style={homeStyle}>
       <span style={{ display: 'none' }}>Home</span>
       <div style={buttonContainerStyle}>
-        {/* Hint: Implement this */}
         <Link to="/candidate/registration" data-testid="registration-button" style={buttonStyle}>
           Register Candidate
         </Link>

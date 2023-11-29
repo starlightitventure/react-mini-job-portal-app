@@ -4,6 +4,7 @@ import './App.css';
 //Components
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import CandidateRegistration from './components/CandidateRegistration'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/candidate/registration' element={<CandidateRegistration />} />
       </Routes>
     </BrowserRouter>
   );
