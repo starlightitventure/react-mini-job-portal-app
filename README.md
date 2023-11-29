@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Mini Job Portal Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Mini Job Portal Website, a platform for job seekers to register their profiles and for recruiters to find potential candidates.
 
-## Available Scripts
+## Table of Contents
+- [Features](#features)
+- [Pages](#pages)
+  - [Home Page](#home-page)
+  - [Candidate Registration](#candidate-registration)
+  - [Candidate List](#candidate-list)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### Candidate Registration
+Candidates (job seekers) can register on the website by providing their name, email, role, and skills. The registration form includes:
+- Name (required)
+- Email (required, must be unique)
+- Role (required)
+- Skills (at least one, maximum of five)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Upon successful registration, the candidate's profile is added to the candidate list.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Candidate List
+Recruiters can view a list of registered candidates. The list includes profile cards with the following details:
+- Name
+- Role
+- Email
+- Skills (displayed as tags)
 
-### `npm test`
+Recruiters can search for candidates based on their skills using a search bar. The search results are dynamically updated, and a title shows the number of profiles found. An "All" button resets the search and shows all available profile cards.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pages
 
-### `npm run build`
+### Home Page
+- **Route:** /
+- Navbar with the heading "Job Portal."
+- Two buttons: "Candidate List" and "Candidate Registration." The "Candidate List" button displays the total number of candidate profiles in parentheses.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Candidate Registration
+- **Route:** /candidate/registration
+- Navbar with the heading "Job Portal" and buttons to navigate to "Candidate List" and "Home."
+- Registration form with fields for name, role, email, and skills. The form includes an "Add Skill" button, and a tag appears below the input box for each added skill. The submit button is disabled until required fields are filled.
+- Displays a "Email already exists" message if a user tries to register with an existing email.
+- Maximum of five skills can be added.
+- Upon successful registration, a message is displayed: "Candidate profile created."
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Candidate List
+- **Route:** /candidate/list
+- Navbar with the heading "Job Portal" and buttons to navigate to "Candidate Registration" and "Home."
+- Displays a list of profile cards with candidate details (name, role, email, skills).
+- Includes a search bar for skill-based search and an "All" button to reset the search.
+- A title shows the number of profiles found after a search.
