@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import CandidateRegistration from './components/CandidateRegistration'
+import CandidateList from './components/CandidateList'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/candidate/registration' element={<CandidateRegistration />} />
+        <Route path='/candidate/list' element={<CandidateList />} />
       </Routes>
     </BrowserRouter>
   );
